@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Kin by Chiko">
@@ -9,7 +11,7 @@ import Hero from "../components/Hero.astro";
 
     <section class="home-feature">
       <div class="home-feature-image">
-        <img src={`${import.meta.env.BASE_URL}/images/placeholders/conversation-2-l.jpg`} alt="People gathered in conversation" />
+        <img src={`${base}/images/gatherings/gathering-audience-clap.jpg`} alt="The audience applauds at the close of a performance" />
       </div>
 
       <div class="home-feature-text">
@@ -19,21 +21,8 @@ import Hero from "../components/Hero.astro";
           Longform interviews and visual storytelling rooted in culture, access,
           identity, and creative practice.
         </p>
-        <a href="/stories" class="text-link">Explore Stories →</a>
+        <a href={`${base}/stories/`} class="text-link">Explore Stories →</a>
       </div>
-    </section>
-
-    <section class="home-gathering">
-      <div>
-        <p class="eyebrow">Upcoming Gathering</p>
-        <h2>Kin Salon No. 1</h2>
-        <p>
-          A moderated evening of conversation, listening, and shared reflection.
-        </p>
-        <a href="/gatherings" class="button primary">View Gatherings</a>
-      </div>
-
-      <img src={`${import.meta.env.BASE_URL}/images/placeholders/connection-3-p.jpg`} alt="Hands reaching toward each other" />
     </section>
 
     <section class="home-mission">
@@ -52,40 +41,57 @@ import Hero from "../components/Hero.astro";
 
       <div class="dispatch-grid">
         <article>
-          <img src={`${import.meta.env.BASE_URL}/images/placeholders/portrait-1-p.jpg`} alt="Portrait placeholder" />
+          <img src={`${base}/images/community/community-cafe-laugh-bw.jpg`} alt="A woman laughing at an outdoor cafe table" />
           <p class="eyebrow">Interview</p>
           <h3>Creative practice and place</h3>
         </article>
 
         <article>
-          <img src={`${import.meta.env.BASE_URL}/images/placeholders/portrait-2-p.jpg`} alt="Portrait placeholder" />
+          <img src={`${base}/images/community/community-rooftop-group-bw.jpg`} alt="A group of friends, several using mobility aids, gathered together on a rooftop deck" />
           <p class="eyebrow">Dispatch</p>
           <h3>Notes on access and belonging</h3>
         </article>
 
         <article>
-          <img src={`${import.meta.env.BASE_URL}/images/placeholders/conversation-1-l.jpg`} alt="Conversation placeholder" />
+          <img src={`${base}/images/community/community-mural-walk-bw.jpg`} alt="Three friends, two using mobility aids, in conversation outside a mural" />
           <p class="eyebrow">Gathering</p>
           <h3>A table for conversation</h3>
         </article>
       </div>
     </section>
 
+
+    <section class="home-lessons">
+      <div class="home-lessons-text">
+        <p class="eyebrow">Private Lessons</p>
+        <h2>Study Voice with Chiko.</h2>
+        <p>
+          Join the conversation and learn to tell your story through
+          monologue, public speaking, or song. Private voice lessons welcome
+          people living with and without disabilities, at every level of
+          ability and experience.
+        </p>
+        <a href="https://calendar.app.google/nZeLQxmqeVqFcbHu8" class="button primary">Book a Lesson</a>
+      </div>
+
+      <div class="home-lessons-image">
+        <img src={`${base}/images/chiko-portrait-1-bw.jpg`} alt="Portrait of Chiko" />
+      </div>
+    </section>
+
     <section class="home-newsletter">
       <h2>Join the Dispatch.</h2>
       <p>Thoughtful stories, interviews, and gathering notes from Kin.</p>
-      <a href="/newsletter" class="button secondary">Subscribe</a>
+      <a href={`${base}/newsletter/`} class="button secondary">Subscribe</a>
     </section>
     <footer class="site-footer">
   <div class="footer-nav">
-    <a href={import.meta.env.BASE_URL}>Studio</a>
-    <a href={`${import.meta.env.BASE_URL}concept-two/`}>Journal</a>
-    <a href={`${import.meta.env.BASE_URL}concept-three/`}>Magazine</a>
-    <a href={`${import.meta.env.BASE_URL}stories/`}>Stories</a>
-    <a href={`${import.meta.env.BASE_URL}gatherings/`}>Gatherings</a>
-    <a href={`${import.meta.env.BASE_URL}about/`}>About</a>
-    <a href={`${import.meta.env.BASE_URL}newsletter/`}>Newsletter</a>
-    <a href={`${import.meta.env.BASE_URL}contact/`}>Contact</a>
+    <a href={`${base}/`}>Studio</a>
+    <a href={`${base}/stories/`}>Stories</a>
+    <a href={`${base}/gatherings/`}>Gatherings</a>
+    <a href={`${base}/about/`}>About</a>
+    <a href={`${base}/newsletter/`}>Newsletter</a>
+    <a href={`${base}/contact/`}>Contact</a>
   </div>
 
   <p class="footer-credit">© 2026 Kin by Chiko</p>

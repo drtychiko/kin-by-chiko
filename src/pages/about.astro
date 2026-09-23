@@ -1,9 +1,137 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<Layout title="About">
-  <main class="page-container">
-    <h1>About</h1>
+<Layout title="About | Kin by Chiko">
+  <main class="about-page">
+    <section class="about-hero">
+      <div class="about-hero-image">
+        <img src={`${base}/images/chiko-portrait-2-bw.jpg`} alt="Portrait of Dr. Ty Chiko" />
+      </div>
+
+      <div class="about-hero-text">
+        <p class="eyebrow">About</p>
+        <h1>Dr. Ty Chiko</h1>
+        <p>
+          Originally from the Islands of The Bahamas, Dr. Ty Chiko has been an
+          international performance artist, visual artist, entrepreneur, and
+          disability advocate for over two decades. He has received national
+          recognition from the U.S. Embassy in The Bahamas, along with the
+          Bahamas Independence Committee, and is listed as one of the
+          country's Top 40 Under 40.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">Music Education &amp; Advocacy</p>
+      <h2>Teaching, and using art as a tool for change</h2>
+      <p>
+        Ty previously served as the Director of Vocal Music at Interlochen
+        Center for the Arts, where he used his skills to help young musicians
+        foster their own love for the arts.
+      </p>
+      <p>
+        As someone who is passionate about Social Justice, Ty leverages the
+        power of music and art as tools for advocacy and social change,
+        focusing on promoting inclusivity, accessibility, and equity for
+        people with disabilities, youth, and older adults.
+      </p>
+      <p>
+        His writings on Disability Inclusivity have been published in the
+        Oregon Humanities and in an Open Access Resource for Music Educators
+        in partnership with Bowling Green State University College of Music.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">Research &amp; Community</p>
+      <h2>Building accessible spaces for the arts</h2>
+      <p>
+        Ty's advocacy work also shows up through additional research and
+        community engagement initiatives. He served as the inaugural
+        Musician-in-Residence Coordinator at Mirabella at ASU Senior Living
+        Community. The program has won awards for innovation from both the
+        Mather Institute and Leadingage Arizona. For over 7 years, Ty
+        volunteered as a lead camp counselor for the Amputee Coalition of
+        America Paddy Rossbach Summer Youth Camp. His current research is
+        titled "Cultivating Inclusivity: Exploring How Universities,
+        Performing Arts Institutions, Disability Advocacy Groups, and the
+        Wider Community Can Develop Accessible Theater Spaces for People
+        Living with Disabilities."
+      </p>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">As a Vocalist</p>
+      <h2>On stages across the world</h2>
+      <p>
+        As a vocalist, Ty has appeared as the soloist in The Magnificent
+        Pretty Boy, a work commissioned by the Houston Grand Opera with the
+        Grant Wallace Band, Mahler's Lieder Eines Fahrenden Gesellen, at Frank
+        Lloyd Wright's Gammage Auditorium, The New Mexico Film Festival,
+        Leonard Bernstein's Centennial at The Academy for the Love of
+        Learning led by mentee of Leonard Bernstein, Aaron Stern, Adventures
+        in the Arts National Organization (Bahamas), and the Bahamas National
+        Youth Choir. As a former member of the Bahamas National Youth Choir,
+        he performed across the United States, U.K., Europe, and South
+        Africa.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">Recognition &amp; Media</p>
+      <h2>Press, honors, and collaborations</h2>
+      <p>
+        Ty has also appeared on albums, recordings, news stations, magazines,
+        and podcasts, including collaborations with State Farm and The
+        Players Tribune, National Public Radio (NPR), Amplitude Magazine,
+        StyleZine Magazine (Bahamas), Jumpin' Jacob (short film), "Gratitude"
+        album by renowned conductor and composer, Brian Demaris, "Malted"
+        podcast through Columbia University, and the new work Se Levanta by
+        composer Raquel Acevedo Klein.
+      </p>
+      <p>
+        In 2023, Ty was the Music Director for Portland Center Stage's
+        production of Hair in Portland, Oregon, which received rave reviews
+        from Broadway World, Willamette Week, Oregon ArtsWatch, and Portland
+        Mercury.
+      </p>
+      <p>
+        In 2021, Chiko competed as a finalist in the renowned Lotte Lenya
+        Competition through the Kurt Weill Foundation in New York City. He
+        was also awarded first prizes in the Arizona State University
+        Concerto Competition and Vocal Artistry Song Competition.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">Beyond the Stage</p>
+      <h2>Baking and visual art</h2>
+      <p>
+        Ty loves baking and was also the owner and operator of the
+        micro-bakery, Broken Breadhaus, which received an honorable mention
+        award from the World Bread Awards in 2021.
+      </p>
+      <p>
+        As a visual artist, Ty primarily designs graphite and charcoal
+        portraiture that highlights the beauty of the human form.
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href={`${base}/`}>Studio</a>
+        <a href={`${base}/stories/`}>Stories</a>
+        <a href={`${base}/gatherings/`}>Gatherings</a>
+        <a href={`${base}/about/`}>About</a>
+        <a href={`${base}/newsletter/`}>Newsletter</a>
+        <a href={`${base}/contact/`}>Contact</a>
+      </div>
+
+      <p class="footer-credit">© 2026 Kin by Chiko</p>
+    </footer>
   </main>
 </Layout>

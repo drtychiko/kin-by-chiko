@@ -155,7 +155,6 @@ img {
 }
 
 .home-feature-text h2,
-.home-gathering h2,
 .home-mission h2,
 .section-heading h2,
 .home-newsletter h2 {
@@ -166,32 +165,10 @@ img {
 }
 
 .home-feature-text p,
-.home-gathering p,
 .home-newsletter p {
   font-size: 1.2rem;
   line-height: 1.6;
   max-width: 560px;
-}
-
-.home-gathering {
-  display: grid;
-  grid-template-columns: 1fr 0.55fr;
-  gap: 4rem;
-  align-items: center;
-  padding: 5rem 4rem;
-  background: var(--charcoal);
-  color: var(--cream);
-}
-
-.home-gathering img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  display: block;
-}
-
-.home-gathering .button.primary {
-  border-color: var(--cream);
 }
 
 .home-mission {
@@ -247,6 +224,260 @@ img {
 
 .home-newsletter p {
   margin: 1.5rem auto 2rem;
+}
+
+
+.home-lessons {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 5rem 4rem;
+  border-top: 1px solid var(--charcoal);
+}
+
+.home-lessons-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.home-lessons-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 32%;
+  display: block;
+}
+
+
+/* ABOUT PAGE */
+
+.about-page {
+  padding: 0 4rem 5rem;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem 0 5rem;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center 22%;
+  display: block;
+}
+
+.about-hero-text h1 {
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.about-hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.about-section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.about-section h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.5rem;
+  max-width: 780px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 1.1rem;
+  max-width: 780px;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* GATHERINGS PAGE */
+
+.gatherings-page {
+  padding: 0 4rem 5rem;
+}
+
+.gatherings-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem 0 5rem;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.gatherings-hero-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.gatherings-hero-text h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.gatherings-hero-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.gatherings-video {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 5rem 0;
+  background: var(--charcoal);
+  color: var(--cream);
+  margin: 0 -4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.gatherings-video-text .eyebrow {
+  color: var(--clay);
+}
+
+.gatherings-video-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.gatherings-video-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.gatherings-video-wrap {
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.gatherings-video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #000;
+}
+
+.gatherings-gallery {
+  padding: 5rem 0;
+}
+
+.gatherings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gatherings-grid figure {
+  margin: 0;
+}
+
+.gatherings-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTACT PAGE */
+
+.contact-page {
+  padding: 0 4rem 5rem;
+}
+
+.contact-hero {
+  padding: 3rem 0 2.5rem;
+  max-width: 700px;
+}
+
+.contact-hero h1 {
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 0.5rem 0 0;
+}
+
+.contact-body {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 4rem;
+  padding: 2.5rem 0 4rem;
+  border-top: 1px solid var(--charcoal);
+}
+
+.contact-form {
+  max-width: 520px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  border: 1px solid var(--charcoal);
+  background: transparent;
+  color: var(--charcoal);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  border: 1px solid var(--charcoal);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
 }
 
 /* CONCEPT 2 / JOURNAL */
@@ -628,7 +859,12 @@ img {
 
   .hero,
   .home-feature,
-  .home-gathering,
+  .home-lessons,
+  .about-hero,
+  .gatherings-hero,
+  .gatherings-video,
+  .gatherings-grid,
+  .contact-body,
   .dispatch-grid,
   .oh-feature,
   .oh-card-grid,
@@ -643,7 +879,7 @@ img {
 
   .hero,
   .home-feature,
-  .home-gathering,
+  .home-lessons,
   .home-mission,
   .home-dispatches,
   .home-newsletter,
@@ -651,6 +887,51 @@ img {
   .mag-community,
   .mag-newsletter {
     padding: 3rem 1.25rem;
+  }
+
+  .about-page {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .about-hero {
+    padding: 2rem 0 3rem;
+  }
+
+  .about-section {
+    padding: 2.5rem 0;
+  }
+
+  .gatherings-page {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .gatherings-hero {
+    padding: 2rem 0 3rem;
+  }
+
+  .gatherings-video {
+    margin: 0 -1.25rem;
+    padding: 3rem 1.25rem;
+  }
+
+  .gatherings-video-wrap {
+    max-width: 220px;
+  }
+
+  .gatherings-gallery {
+    padding: 3rem 0;
+  }
+
+  .contact-page {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .contact-hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .contact-body {
+    padding: 2rem 0 3rem;
   }
 
   .oh-page {
@@ -666,7 +947,6 @@ img {
   }
 
   .home-feature-image img,
-  .home-gathering img,
   .dispatch-grid img,
   .oh-card-image,
   .oh-card-grid img,
@@ -717,7 +997,6 @@ img {
   .mag-community h2,
   .mag-newsletter h2,
   .home-feature-text h2,
-  .home-gathering h2,
   .home-mission h2,
   .section-heading h2,
   .home-newsletter h2,

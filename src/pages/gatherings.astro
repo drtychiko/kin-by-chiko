@@ -1,9 +1,108 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<Layout title="Gatherings">
-  <main class="page-container">
-    <h1>Gatherings</h1>
+<Layout title="Gatherings | Kin by Chiko">
+  <main class="gatherings-page">
+    <section class="gatherings-hero">
+      <div class="gatherings-hero-image">
+        <img
+          src={`${base}/images/gatherings/gathering-wide-room.jpg`}
+          alt="A small crowd gathered in a gallery space to listen to a woodwind ensemble"
+        />
+      </div>
+
+      <div class="gatherings-hero-text">
+        <p class="eyebrow">Gatherings</p>
+        <h1>Come in. We're making something together.</h1>
+        <p>
+          Kin Salons are evenings built around a shared table and a shared
+          room — part communal meal, part live performance, part
+          conversation. Some nights we cook together. Others, we listen
+          together. Every gathering starts the same way: come in.
+        </p>
+      </div>
+    </section>
+
+    <section class="gatherings-video">
+      <div class="gatherings-video-text">
+        <p class="eyebrow">From a Recent Salon</p>
+        <h2>An evening in the kitchen</h2>
+        <p>
+          A look inside one of our recent gatherings, where the table was the
+          whole event — cooking, plating, and sharing a meal together before
+          the conversation even started.
+        </p>
+      </div>
+
+      <div class="gatherings-video-wrap">
+        <video
+          controls
+          preload="metadata"
+          poster={`${base}/images/gatherings/kin-salon-poster.jpg`}
+        >
+          <source src={`${base}/video/kin-salon-intro.mp4`} type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="gatherings-gallery">
+      <div class="section-heading">
+        <p class="eyebrow">A Kin Salon, in Photos</p>
+        <h2>Listening, together, in the room</h2>
+      </div>
+
+      <div class="gatherings-grid">
+        <figure>
+          <img
+            src={`${base}/images/gatherings/gathering-flute-audience.jpg`}
+            alt="A flutist performs while the audience listens, some seated on cushions on the floor"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${base}/images/gatherings/gathering-profile-a.jpg`}
+            alt="A musician in a colorful printed shirt, seen in profile"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${base}/images/gatherings/gathering-profile-b.jpg`}
+            alt="A close profile portrait of a musician wearing glasses"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${base}/images/gatherings/gathering-fist-raised.jpg`}
+            alt="An audience member raises a fist during the performance"
+          />
+        </figure>
+
+        <figure>
+          <img
+            src={`${base}/images/gatherings/gathering-audience-clap.jpg`}
+            alt="The audience applauds at the close of a performance"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href={`${base}/`}>Studio</a>
+        <a href={`${base}/stories/`}>Stories</a>
+        <a href={`${base}/gatherings/`}>Gatherings</a>
+        <a href={`${base}/about/`}>About</a>
+        <a href={`${base}/newsletter/`}>Newsletter</a>
+        <a href={`${base}/contact/`}>Contact</a>
+      </div>
+
+      <p class="footer-credit">© 2026 Kin by Chiko</p>
+    </footer>
   </main>
 </Layout>

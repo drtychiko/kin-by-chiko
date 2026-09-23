@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
 <section class="hero">
   <div class="hero-text">
     <p class="eyebrow">Public humanities media studio</p>
@@ -9,12 +13,12 @@
     </p>
 
     <div class="hero-actions">
-      <a href="/stories" class="button primary">Explore Stories</a>
-      <a href="/gatherings" class="button secondary">View Gatherings</a>
+      <a href={`${base}/stories/`} class="button primary">Explore Stories</a>
+      <a href={`${base}/gatherings/`} class="button secondary">View Gatherings</a>
     </div>
   </div>
 
   <div class="hero-image-wrap">
-    <img src={`${import.meta.env.BASE_URL}/images/placeholders/conversation-1-l.jpg`} alt="Kin interview portrait" />
+    <img src={`${base}/images/community/community-mother-daughter-bw.jpg`} alt="A mother and daughter share a warm embrace, laughing together" />
   </div>
 </section>

@@ -1,9 +1,66 @@
-  ---
+---
 import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<Layout title="Contact">
-  <main class="page-container">
-    <h1>Contact</h1>
+<Layout title="Contact | Kin by Chiko">
+  <main class="contact-page">
+    <section class="contact-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch.</h1>
+    </section>
+
+    <section class="contact-body">
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/xkjgbkzj"
+        method="POST"
+      >
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+
+        <button type="submit" class="button primary">Send Message</button>
+      </form>
+
+      <div class="contact-links">
+        <a
+          href="https://www.instagram.com/kin_by_chiko"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-link"
+        >
+          Instagram →
+        </a>
+        <a href="https://calendar.app.google/nZeLQxmqeVqFcbHu8" class="text-link">
+          Book a Lesson →
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href={`${base}/`}>Studio</a>
+        <a href={`${base}/stories/`}>Stories</a>
+        <a href={`${base}/gatherings/`}>Gatherings</a>
+        <a href={`${base}/about/`}>About</a>
+        <a href={`${base}/newsletter/`}>Newsletter</a>
+        <a href={`${base}/contact/`}>Contact</a>
+      </div>
+
+      <p class="footer-credit">© 2026 Kin by Chiko</p>
+    </footer>
   </main>
 </Layout>
