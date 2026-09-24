@@ -5,96 +5,120 @@ import Hero from "../components/Hero.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<Layout title="Kin by Chiko">
+<Layout
+  title="Kin by Chiko"
+  description="Kin by Chiko is the home of Ty Chiko's work as a performer, storyteller, and teacher, helping people find their voice and tell their story."
+>
   <main>
     <Hero />
 
-    <section class="home-feature">
-      <div class="home-feature-image">
-        <img src={`${base}/images/gatherings/gathering-audience-clap.jpg`} alt="The audience applauds at the close of a performance" />
+    <section class="home-dispatches">
+      <div class="section-heading">
+        <p class="eyebrow">Selected Highlights</p>
+        <h2>Recent work</h2>
       </div>
 
-      <div class="home-feature-text">
-        <p class="eyebrow">Featured Conversation</p>
-        <h2>What kind of belonging are we making?</h2>
-        <p>
-          Longform interviews and visual storytelling rooted in culture, access,
-          identity, and creative practice.
-        </p>
-        <a href={`${base}/stories/`} class="text-link">Explore Stories →</a>
+      <div class="dispatch-grid">
+        <article>
+          <img src={`${base}/images/personal/renee-fleming-interview.jpg`} alt="Ty in conversation with Renée Fleming on stage" />
+          <p class="eyebrow">Interview</p>
+          <h3>In Conversation with Renée Fleming</h3>
+          <p>A conversation on voice, storytelling and artistry at Interlochen Arts Academy.</p>
+        </article>
+
+        <article>
+          <img src={`${base}/images/personal/mirabella-recital.jpg`} alt="Ty speaking to a full room of residents at Mirabella at ASU" />
+          <p class="eyebrow">Residency</p>
+          <h3>Inaugural Musician-in-Residence Coordinator</h3>
+          <p>Launched an award-winning residency program at Mirabella at ASU Senior Living Community.</p>
+        </article>
+
+        <article>
+          <img src={`${base}/images/personal/hair-musical.jpg`} alt="Music stand with the Hair program at Portland Center Stage, with the set visible on stage behind it" />
+          <p class="eyebrow">Music Direction</p>
+          <h3>Music Director, Hair the Musical</h3>
+          <p>Led music direction for Portland Center Stage's production at The Armory.</p>
+        </article>
+
+        <article>
+          <img src={`${base}/images/personal/storytelling-ensemble.jpg`} alt="A chamber ensemble performs Peter and the Wolf for a seated audience of families in a gallery space" />
+          <p class="eyebrow">Storytelling</p>
+          <h3>A Community Thanksgiving: Peter and the Wolf</h3>
+          <p>
+            A chamber ensemble performance of Prokofiev's beloved Peter and
+            the Wolf, shared as a Thanksgiving gift for families with young
+            children.
+          </p>
+        </article>
+
+        <article>
+          <img src={`${base}/images/personal/camp-volunteer-group.jpg`} alt="Ty poses with a large group of campers and counselors at the Inclusive Arts Camp" style="object-position: center 20%;" />
+          <p class="eyebrow">Community</p>
+          <h3>Inclusive Arts Camp Volunteer</h3>
+          <p>
+            Teaching and mentoring at the Amputee Coalition of America for
+            kids with disabilities.
+          </p>
+        </article>
       </div>
     </section>
 
     <section class="home-mission">
       <p class="eyebrow">Mission</p>
-      <h2>
-        Story into relationship.<br />
-        Relationship into action.
+      <h2 class="mission-statement">
+        My work as a performer, storyteller, and teacher helps people,
+        disabled and non-disabled alike, find their voice and tell their
+        story.
       </h2>
     </section>
 
-    <section class="home-dispatches">
-      <div class="section-heading">
-        <p class="eyebrow">Latest Dispatches</p>
-        <h2>Recent notes from Kin</h2>
+    <section class="home-feature">
+      <div class="home-feature-image">
+        <img src={`${base}/images/personal/community-workshop.jpg`} alt="Ty leading a storytelling and music workshop with a diverse community group" />
       </div>
 
-      <div class="dispatch-grid">
-        <article>
-          <img src={`${base}/images/community/community-cafe-laugh-bw.jpg`} alt="A woman laughing at an outdoor cafe table" />
-          <p class="eyebrow">Interview</p>
-          <h3>Creative practice and place</h3>
-        </article>
-
-        <article>
-          <img src={`${base}/images/community/community-rooftop-group-bw.jpg`} alt="A group of friends, several using mobility aids, gathered together on a rooftop deck" />
-          <p class="eyebrow">Dispatch</p>
-          <h3>Notes on access and belonging</h3>
-        </article>
-
-        <article>
-          <img src={`${base}/images/community/community-mural-walk-bw.jpg`} alt="Three friends, two using mobility aids, in conversation outside a mural" />
-          <p class="eyebrow">Gathering</p>
-          <h3>A table for conversation</h3>
-        </article>
-      </div>
-    </section>
-
-
-    <section class="home-lessons">
-      <div class="home-lessons-text">
-        <p class="eyebrow">Private Lessons</p>
-        <h2>Study Voice with Chiko.</h2>
+      <div class="home-feature-text">
+        <p class="eyebrow">The Work</p>
+        <h2>Performance, story, and teaching, all one practice.</h2>
         <p>
-          Join the conversation and learn to tell your story through
-          monologue, public speaking, or song. Private voice lessons welcome
-          people living with and without disabilities, at every level of
-          ability and experience.
+          Whether it's a concert hall, a classroom, or a church choir, the
+          work is the same: helping people find their voice and tell
+          their story.
         </p>
-        <a href="https://calendar.app.google/nZeLQxmqeVqFcbHu8" class="button primary">Book a Lesson</a>
-      </div>
-
-      <div class="home-lessons-image">
-        <img src={`${base}/images/chiko-portrait-1-bw.jpg`} alt="Portrait of Chiko" />
+        <p>
+          That takes different forms depending on the day: performing on
+          stage, coaching students one-on-one, leading a masterclass, or
+          advocating for more accessible arts spaces. The forms and spaces
+          change, but the purpose stays the same.
+        </p>
       </div>
     </section>
 
     <section class="home-newsletter">
-      <h2>Join the Dispatch.</h2>
-      <p>Thoughtful stories, interviews, and gathering notes from Kin.</p>
-      <a href={`${base}/newsletter/`} class="button secondary">Subscribe</a>
-    </section>
-    <footer class="site-footer">
-  <div class="footer-nav">
-    <a href={`${base}/`}>Studio</a>
-    <a href={`${base}/stories/`}>Stories</a>
-    <a href={`${base}/gatherings/`}>Gatherings</a>
-    <a href={`${base}/about/`}>About</a>
-    <a href={`${base}/newsletter/`}>Newsletter</a>
-    <a href={`${base}/contact/`}>Contact</a>
-  </div>
+      <div class="home-newsletter-image">
+        <img src={`${base}/images/personal/vocal-coaching.jpg`} alt="Ty coaching a student's posture at the piano during a voice lesson" />
+      </div>
 
-  <p class="footer-credit">© 2026 Kin by Chiko</p>
-</footer>
+      <div class="home-newsletter-text">
+        <h2>Learn to Tell Your Story.</h2>
+        <p>
+          Private voice lessons and masterclasses in monologue, public
+          speaking, and song are open to people living with and without
+          disabilities, at every level of experience.
+        </p>
+        <a href={`${base}/teaching/`} class="button secondary">View Teaching</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href={`${base}/`}>Home</a>
+        <a href={`${base}/about/`}>About</a>
+        <a href={`${base}/teaching/`}>Teaching</a>
+        <a href={`${base}/contact/`}>Contact</a>
+      </div>
+
+      <p class="footer-credit">© 2026 Kin by Chiko</p>
+    </footer>
   </main>
 </Layout>

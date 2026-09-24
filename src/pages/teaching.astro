@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout
+  title="Teaching | Kin by Chiko"
+  description="Private voice lessons and masterclasses in monologue, public speaking, and song, taught by Ty Chiko for students of every ability level."
+>
+  <main>
+    <div class="about-page">
+      <section class="about-hero">
+        <div class="about-hero-image">
+          <img src={`${base}/images/personal/coaching-session.jpg`} alt="Ty leads a vocal coaching session at the piano, arms raised mid-phrase" />
+        </div>
+
+        <div class="about-hero-text">
+          <p class="eyebrow">Teaching</p>
+          <h1>Learn to Tell Your Story.</h1>
+          <p>
+            Private voice lessons and masterclasses in monologue, public
+            speaking, and song for people living with and without
+            disabilities, at every level of ability and experience.
+            Individual sessions are tailored to your goals, whether
+            that's preparing for an audition, building confidence as a
+            speaker, or simply finding your voice.
+          </p>
+          <p>
+            Every lesson draws on two decades of experience as a
+            performer, educator, and disability advocate, with
+            accessibility built into the process rather than added as an
+            afterthought. No two students learn the same way, and no two
+            stories sound the same, so teaching methods are adapted to
+            fit however you communicate and learn best. Ability level and
+            experience never determine what's possible.
+          </p>
+          <p>
+            Lessons are held in person and can be arranged as single
+            sessions or ongoing coaching, with masterclasses available
+            for groups and organizations. However you learn best, the
+            format is built around what will actually help you grow.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <p class="eyebrow">Private Lessons</p>
+        <h2>Flexible voice coaching</h2>
+        <p>
+          Lessons are built around you, whether that's preparing a
+          monologue, finding your footing as a public speaker, or working
+          through a song. The goal is always the same: helping you find
+          your voice and tell your story with confidence, whatever your
+          starting point or ability level.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-block">
+            <h3>Per Lesson</h3>
+            <div class="pricing-row">
+              <span>30 minutes</span>
+              <span>$60</span>
+            </div>
+            <div class="pricing-row">
+              <span>45 minutes</span>
+              <span>$85</span>
+            </div>
+            <div class="pricing-row">
+              <span>60 minutes</span>
+              <span>$110</span>
+            </div>
+          </div>
+
+          <div class="pricing-block">
+            <h3>Group Class</h3>
+            <div class="pricing-row">
+              <span>Drop-in session</span>
+              <span>$30</span>
+            </div>
+            <p class="pricing-note">No monthly plan required.</p>
+          </div>
+
+          <div class="pricing-block">
+            <h3>Monthly Plans</h3>
+            <div class="pricing-row">
+              <span>Bronze: two 1-hour lessons + 1 group class</span>
+              <span>$240/mo</span>
+            </div>
+            <div class="pricing-row">
+              <span>Silver: four 1-hour lessons + 1 group class</span>
+              <span>$420/mo</span>
+            </div>
+            <div class="pricing-row">
+              <span>Gold: four 90-minute lessons + 1 group class</span>
+              <span>$595/mo</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://calendar.app.google/nZeLQxmqeVqFcbHu8" class="button primary">Book a Lesson</a>
+      </section>
+    </div>
+
+    <section class="home-feature">
+      <div class="home-feature-image">
+        <img src={`${base}/images/personal/camp-cabin-group.jpg`} alt="Ty and a large group of campers, including several with prosthetic legs, pose outside a cabin at camp" />
+      </div>
+
+      <div class="home-feature-text">
+        <p class="eyebrow">Community &amp; Mentorship</p>
+        <h2>Teaching beyond the studio</h2>
+        <p>
+          Ty volunteered as a lead camp counselor for the Amputee Coalition
+          of America's Paddy Rossbach Summer Youth Camp — mentoring kids
+          with disabilities. That same commitment to accessible, inclusive
+          teaching shapes every lesson and masterclass he leads today.
+        </p>
+      </div>
+    </section>
+
+    <section class="teaching-cta">
+      <h2>Ready to start?</h2>
+      <p>Book a lesson and let's find the story you're ready to tell.</p>
+      <a href="https://calendar.app.google/nZeLQxmqeVqFcbHu8" class="button secondary">Book a Lesson</a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href={`${base}/`}>Home</a>
+        <a href={`${base}/about/`}>About</a>
+        <a href={`${base}/teaching/`}>Teaching</a>
+        <a href={`${base}/contact/`}>Contact</a>
+      </div>
+
+      <p class="footer-credit">© 2026 Kin by Chiko</p>
+    </footer>
+  </main>
+</Layout>

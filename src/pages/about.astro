@@ -4,11 +4,14 @@ import Layout from "../layouts/Layout.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<Layout title="About | Kin by Chiko">
+<Layout
+  title="About | Kin by Chiko"
+  description="Meet Ty Chiko, a performer, storyteller, and teacher whose work spans the concert stage, the classroom, and disability advocacy."
+>
   <main class="about-page">
     <section class="about-hero">
       <div class="about-hero-image">
-        <img src={`${base}/images/chiko-portrait-2-bw.jpg`} alt="Portrait of Dr. Ty Chiko" />
+        <img src={`${base}/images/chiko-portrait-red-hair.jpg`} alt="Portrait of Dr. Ty Chiko" />
       </div>
 
       <div class="about-hero-text">
@@ -54,13 +57,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         community engagement initiatives. He served as the inaugural
         Musician-in-Residence Coordinator at Mirabella at ASU Senior Living
         Community. The program has won awards for innovation from both the
-        Mather Institute and Leadingage Arizona. For over 7 years, Ty
-        volunteered as a lead camp counselor for the Amputee Coalition of
-        America Paddy Rossbach Summer Youth Camp. His current research is
-        titled "Cultivating Inclusivity: Exploring How Universities,
-        Performing Arts Institutions, Disability Advocacy Groups, and the
-        Wider Community Can Develop Accessible Theater Spaces for People
-        Living with Disabilities."
+        Mather Institute and Leadingage Arizona. Ty volunteered as a lead
+        camp counselor for the Amputee Coalition of America Paddy Rossbach
+        Summer Youth Camp. His current research is titled "Cultivating
+        Inclusivity: Exploring How Universities, Performing Arts
+        Institutions, Disability Advocacy Groups, and the Wider Community
+        Can Develop Accessible Theater Spaces for People Living with
+        Disabilities."
       </p>
     </section>
 
@@ -107,27 +110,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       </p>
     </section>
 
-    <section class="about-section">
-      <p class="eyebrow">Beyond the Stage</p>
-      <h2>Baking and visual art</h2>
-      <p>
-        Ty loves baking and was also the owner and operator of the
-        micro-bakery, Broken Breadhaus, which received an honorable mention
-        award from the World Bread Awards in 2021.
-      </p>
-      <p>
-        As a visual artist, Ty primarily designs graphite and charcoal
-        portraiture that highlights the beauty of the human form.
-      </p>
-    </section>
-
     <footer class="site-footer">
       <div class="footer-nav">
-        <a href={`${base}/`}>Studio</a>
-        <a href={`${base}/stories/`}>Stories</a>
-        <a href={`${base}/gatherings/`}>Gatherings</a>
+        <a href={`${base}/`}>Home</a>
         <a href={`${base}/about/`}>About</a>
-        <a href={`${base}/newsletter/`}>Newsletter</a>
+        <a href={`${base}/teaching/`}>Teaching</a>
         <a href={`${base}/contact/`}>Contact</a>
       </div>
 

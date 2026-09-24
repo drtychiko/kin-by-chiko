@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout
+  title="Page Not Found | Kin by Chiko"
+  description="The page you're looking for doesn't exist, or may have moved."
+>
+  <main class="notfound-page">
+    <section class="notfound-hero">
+      <p class="eyebrow">404</p>
+      <h1>Lost your place?</h1>
+      <p>
+        The page you're looking for doesn't exist, or may have moved.
+        Let's get you back on track.
+      </p>
+      <a href={`${base}/`} class="button primary">Back to Home</a>
+    </section>
+  </main>
+</Layout>
