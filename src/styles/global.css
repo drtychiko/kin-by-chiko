@@ -621,6 +621,14 @@ img {
 
 /* GATHERINGS PAGE */
 
+.about-hero.about-hero-textonly {
+  grid-template-columns: 1fr;
+}
+
+.about-hero-textonly .about-hero-text h1 {
+  max-width: 980px;
+}
+
 .gathering-list {
   list-style: none;
   margin: 0.5rem 0 0;
