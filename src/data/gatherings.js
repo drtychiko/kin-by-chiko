@@ -26,9 +26,12 @@
 export const gatherings = [
   {
     date: "2027-04-02",
+    time: "7:30 PM (doors 6:30)",
     title: "Kin by Chiko in concert",
     type: "Performance",
-    location: "The CheckOut",
-    description: "An evening of original music and storytelling.",
+    location: "The CheckOut, 4116 N Clark St, Chicago",
+    description: "Out of the Storm: an intimate program on sorrow and the quiet, resilient spaces we seek for healing after loss, moving across centuries of music from art song to contemporary work, including Mahler's Kindertotenlieder. 21+.",
+    link: "https://dice.fm/partner/tickets/event/6936a7-out-of-the-storm-kin-by-chiko-2nd-apr-the-checkout-chicago-tickets",
+    linkLabel: "Get tickets",
   },
 ];
