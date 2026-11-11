@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { gatherings } from "../data/gatherings.js";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Today's date in Chicago as YYYY-MM-DD, so events stay up through their last day.
+const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Chicago" });
+
+const fmt = (iso, opts) => {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-US", { timeZone: "UTC", ...opts });
+};
+
+const upcoming = gatherings
+  .filter((g) => (g.endDate || g.date) >= today)
+  .sort((a, b) => a.date.localeCompare(b.date))
+  .map((g) => ({
+    ...g,
+    month: fmt(g.date, { month: "short" }),
+    day: fmt(g.date, { day: "numeric" }),
+    longDate: g.endDate && g.endDate !== g.date
+      ? (g.date.slice(0, 7) === g.endDate.slice(0, 7)
+          ? `${fmt(g.date, { month: "long", day: "numeric" })}–${fmt(g.endDate, { day: "numeric", year: "numeric" })}`
+          : `${fmt(g.date, { month: "long", day: "numeric" })} – ${fmt(g.endDate, { month: "long", day: "numeric", year: "numeric" })}`)
+      : fmt(g.date, { weekday: "long", month: "long", day: "numeric", year: "numeric" }),
+  }));
+
+const jsonLd = upcoming.map((g) => ({
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: g.title,
+  startDate: g.date,
+  ...(g.endDate ? { endDate: g.endDate } : {}),
+  ...(g.location ? { location: { "@type": "Place", name: g.location } } : {}),
+  ...(g.description ? { description: g.description } : {}),
+  ...(g.link ? { url: g.link } : {}),
+  organizer: { "@type": "Person", name: "Ty Chiko" },
+}));
+---
+
+<Layout
+  title="Gatherings | Kin by Chiko"
+  description="Upcoming performances, workshops, talks, and community gatherings with Ty Chiko. Come in, we're making something together."
+>
+  <main>
+    <div class="about-page">
+      <section class="about-hero">
+        <div class="about-hero-image">
+          <img src={`${base}/images/personal/community-workshop.jpg`} alt="Ty leading a storytelling and music workshop with a diverse community group" />
+        </div>
+
+        <div class="about-hero-text">
+          <p class="eyebrow">Gatherings</p>
+          <h1>Come in, we're making something together.</h1>
+          <p>
+            Performances, workshops, talks, and community gatherings built
+            around music and story. Find the next one below and come be
+            part of it.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <p class="eyebrow">Upcoming</p>
+        <h2>What's next</h2>
+
+        {upcoming.length > 0 && (
+          <ul class="gathering-list" id="gathering-list">
+            {upcoming.map((g) => (
+              <li class="gathering" data-last-day={g.endDate || g.date}>
+                <div class="gathering-date" aria-hidden="true">
+                  <span class="gathering-month">{g.month}</span>
+                  <span class="gathering-day">{g.day}</span>
+                </div>
+
+                <div class="gathering-body">
+                  {g.type && <p class="gathering-type">{g.type}</p>}
+                  <h3>{g.title}</h3>
+                  <p class="gathering-meta">
+                    <time datetime={g.date}>{g.longDate}</time>
+                    {g.time && <span> · {g.time}</span>}
+                    {g.location && <span> · {g.location}</span>}
+                  </p>
+                  {g.description && <p class="gathering-desc">{g.description}</p>}
+                  {g.link && (
+                    <a href={g.link} class="text-link" target="_blank" rel="noopener noreferrer">
+                      {g.linkLabel || "Details"} →
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div class="gathering-empty" id="gathering-empty" hidden={upcoming.length > 0}>
+          <p>
+            New dates are on the way. Follow along on
+            <a href="https://www.instagram.com/kin_by_chiko" class="text-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            to be the first to hear.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <p class="eyebrow">Bring it to your community</p>
+        <h2>Host a gathering</h2>
+        <p>
+          Schools, arts organizations, and community groups can invite Ty
+          for a performance, a masterclass or workshop, a talk, or a
+          storytelling gathering built around your people.
+        </p>
+        <a href={`${base}/contact/`} class="button primary">Get in touch</a>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-nav">
+        <a href={`${base}/`}>Home</a>
+        <a href={`${base}/about/`}>About</a>
+        <a href={`${base}/teaching/`}>Teaching</a>
+        <a href={`${base}/gatherings/`}>Gatherings</a>
+        <a href={`${base}/contact/`}>Contact</a>
+      </div>
+
+      <p class="footer-credit">© 2026 Kin by Chiko</p>
+    </footer>
+  </main>
+
+  {jsonLd.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <script>
+    // Hide events whose last day has passed since the site was last published.
+    const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Chicago" });
+    const items = document.querySelectorAll<HTMLElement>(".gathering");
+    let visible = 0;
+    items.forEach((el) => {
+      if ((el.dataset.lastDay ?? "") < today) el.hidden = true;
+      else visible++;
+    });
+    if (items.length > 0 && visible === 0) {
+      document.getElementById("gathering-list")?.setAttribute("hidden", "");
+      document.getElementById("gathering-empty")?.removeAttribute("hidden");
+    }
+  </script>
+</Layout>
