@@ -11,7 +11,7 @@ export const callForArtists = {
   eyebrow: "Call for Artists",
   heading: "Help us build Chicago ParaArts.",
   paragraphs: [
-    "I'm Ty Chiko, the founder of Chicago ParaArts, a Chicago nonprofit creating orchestral, chamber, and theatrical work made by disabled and non-disabled artists performing as equals.",
+    "Chicago ParaArts is a Chicago nonprofit creating orchestral, chamber, and theatrical work made by disabled and non-disabled artists performing as equals.",
     "Through ParaOrchestra, ParaTheatre, and an accessible music school for the next generation, we're building the stage I've wanted to see for years. Right now I'm gathering our founding artists: musicians and theater artists who want to make something together.",
     "If that sounds like you, or someone you know, I'd love to hear from you.",
   ],
