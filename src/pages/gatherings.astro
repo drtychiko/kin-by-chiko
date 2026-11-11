@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { gatherings } from "../data/gatherings.js";
+import { callForArtists as cfa } from "../data/callForArtists.js";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -60,6 +61,21 @@ const jsonLd = upcoming.map((g) => ({
           </p>
         </div>
       </section>
+
+      {cfa.show && (
+        <section class="spotlight" aria-labelledby="spotlight-heading">
+          <div class="spotlight-image">
+            <img src={`${base}/images/personal/hero-portrait-beanie.jpg`} alt="Portrait of Ty Chiko, founder of Chicago ParaArts" />
+          </div>
+          <div class="spotlight-text">
+            <p class="spotlight-eyebrow">{cfa.eyebrow}</p>
+            <h2 id="spotlight-heading">{cfa.heading}</h2>
+            {cfa.paragraphs.map((t) => <p>{t}</p>)}
+            <a href={cfa.buttonLink} class="button" target="_blank" rel="noopener noreferrer">{cfa.buttonLabel} →</a>
+            {cfa.note && <p class="spotlight-note">{cfa.note}</p>}
+          </div>
+        </section>
+      )}
 
       <section class="about-section">
         <p class="eyebrow">Upcoming</p>

@@ -24,5 +24,11 @@
 // ─────────────────────────────────────────────────────────────
 
 export const gatherings = [
-  // Add events here.
+  {
+    date: "2027-04-02",
+    title: "Ty Chiko in concert",
+    type: "Performance",
+    location: "The CheckOut",
+    description: "An evening of original music and storytelling.",
+  },
 ];
