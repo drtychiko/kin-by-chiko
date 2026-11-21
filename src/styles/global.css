@@ -377,6 +377,8 @@ img {
   }
 }
 
+.pricing-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
 .choir-details {
   max-width: 780px;
   margin-top: 3rem;
