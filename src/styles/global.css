@@ -407,6 +407,7 @@ img {
 
 .location-note p { margin: 0 0 0.75rem; }
 .location-note p:last-child { margin-bottom: 0; }
+.location-note a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* 404 PAGE */
 
